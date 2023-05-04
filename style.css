@@ -11,17 +11,17 @@ body {
   
   .pricing-plan {
     text-align: center;
-    border: 1px solid #ccc;
+    border: none;
     padding: 20px;
     width: calc(33.33% - 20px);;
     max-width: 400px;
-    height: 500px;
+    min-height: 500px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 2px 2px 2px 2px rgb(227, 220, 220)
-    ;
+    box-shadow: 2px 2px 2px 2px rgb(227, 220, 220);
+    flex-grow: 1;
 
   }
  
@@ -32,12 +32,7 @@ body {
     position: relative;
   }
 
-  .pricing-container .pricing-plan:nth-child(1),
-.pricing-container .pricing-plan:nth-child(3) {
-  border: none;
-}
-
-
+  
   .plan-title {
     font-size: 24px;
     font-weight: bold;
@@ -63,11 +58,15 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
   
   .plan-features li {
     margin-bottom: 5px;
+    display: flex;
+    padding-left: 35%;
   }
   
   .plan-button {
@@ -85,25 +84,25 @@ body {
     }
 
 
-  
-
   .pricing-container .pricing-plan .plan-title span {
-    font-size: 0.8em;
+    font-size: 0.5em;
     display: inline-block;
-    transform: rotate(45deg);
-    background-color: #e3dfdf; /* change to your desired background color */
-    color: #120707; /* change to your desired text color */
-    padding: 6px;
-    border-radius: 10px;
+    transform: rotate(0deg);
+    background-color: #e3dfdf;
+    color: #120707; 
+    padding: 4px;
+    border-radius: 20px;
     position: absolute;
-    top: 38px;
-    right: -15px;
+    top: 24px;
+    right: 1px;
   }
   
-
-  @media (max-width: 768px) {
+  
+/* For screens smaller than 600px */
+@media screen and (max-width: 600px) {
     .pricing-container {
       flex-direction: column;
+      height: 100%;
       padding: 20px;
     }
   
@@ -113,13 +112,19 @@ body {
       margin-bottom: 20px;
     }
   
-    .pricing-plan:nth-child(2) {
+    .pricing-container .pricing-plan:nth-child(2) {
       position: static;
+      background-color: #fff; 
+    }
+  
+    .plan-features li {
+      padding-left: 20%;
     }
   
     .pricing-container .pricing-plan .plan-title span {
       top: -20px;
       right: 20px;
+      font-size: 0.4em;
+      padding: 2px;
     }
   }
-  
