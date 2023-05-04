@@ -85,7 +85,7 @@ body {
 
 
   .pricing-container .pricing-plan .plan-title span {
-    font-size: 0.5em;
+    font-size: 0.6em;
     display: inline-block;
     transform: rotate(0deg);
     background-color: #e3dfdf;
@@ -93,8 +93,8 @@ body {
     padding: 4px;
     border-radius: 20px;
     position: absolute;
-    top: 24px;
-    right: 1px;
+    top: 22px;
+    right: 10px;
   }
   
   
